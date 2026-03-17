@@ -9,7 +9,6 @@
     window.addEventListener("message", (event) => {
 
       if (event.data.type === "canvasExport") {
-
         console.log("Images reçues:");
         console.log(event.data.images);
         event.data.images.forEach(img => {
@@ -19,27 +18,19 @@
       }
 
       if (event.data.type === "canvasPDF") {
-
         console.log("PDF reçu:");
         console.log(event.data.pdf);
         images = event.data.images; 
       }
        if (event.data.type === "canvasSaveConfig") {
-
       console.log("SAVE CONFIG reçu:");
       console.log(event.data.config);
-
     }
-
     if (event.data.type === "canvasSaveBDC") {
-
       console.log("SAVE BDC reçu:");
       console.log(event.data.config);
-
     }
-
     });
-
   });
 </script>
 
@@ -48,7 +39,7 @@
   width="100%" 
   height="1200" 
   style="border:0" 
-  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-downloads allow-modals"
+  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
   title="Configurateur de produit"
 ></iframe>
 
